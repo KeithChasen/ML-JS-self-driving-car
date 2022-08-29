@@ -55,7 +55,11 @@ class Car {
             this.angle -= 0.03;
         }
 
-        this.y -= this.speed;
+        const sin = Math.sin(this.angle);
+        const cos = Math.cos(this.angle);
+
+        this.x -= sin * this.speed;
+        this.y -= cos * this.speed;
     }
 
     draw(ctx) {
