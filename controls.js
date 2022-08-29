@@ -23,7 +23,6 @@ class Controls {
                 this.reverse = val;
                 break;
         }
-        console.table(this)
     }
 
     #addKeyboardListeners() {
