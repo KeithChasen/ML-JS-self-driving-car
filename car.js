@@ -16,6 +16,10 @@ class Car {
     }
 
     update() {
+        this.#move();
+    }
+
+    #move() {
         if (this.controls.forward) {
             this.speed += this.acceleration;
         }
@@ -59,7 +63,6 @@ class Car {
                 this.angle -= 0.03 * flip;
             }
         }
-
 
         const sin = Math.sin(this.angle);
         const cos = Math.cos(this.angle);
