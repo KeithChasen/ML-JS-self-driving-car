@@ -23,6 +23,13 @@ class Road {
                 i / this.laneCount
             );
 
+            if (i > 0 && i < this.laneCount) {
+                // 20 px - line, 20 px - gap
+                ctx.setLineDash([20, 20]);
+            } else {
+                ctx.setLineDash([]);
+            }
+
             ctx.beginPath();
             ctx.moveTo(x, this.top);
             ctx.lineTo(x, this.bottom);
